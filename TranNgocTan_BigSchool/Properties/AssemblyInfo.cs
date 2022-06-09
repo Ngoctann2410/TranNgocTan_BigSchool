@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("TranNgocTan_BigSchool")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("TranNgocTan_BigSchool")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2022")]
+[assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ad818b91-5e76-4ca9-adf2-ede2f70875a8")]
+[assembly: Guid("f34d0532-89d9-4fb5-b930-1c24f31dcae2")]
 
 // Version information for an assembly consists of the following four values:
 //

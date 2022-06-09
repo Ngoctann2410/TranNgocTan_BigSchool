@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TranNgocTan_BigSchool.Models;
 
 namespace TranNgocTan_BigSchool.Controllers
 {
@@ -10,7 +13,15 @@ namespace TranNgocTan_BigSchool.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            BigSchoolContext context = new BigSchoolContext();
+            var upcommingCourse = context.Courses.Where(p => p.DateTime > DateTime.Now).OrderBy(p => p.DateTime).ToList();
+            foreach(Course i in upcommingCourse)
+            {
+                ApplicationUser user = System.Web.HttpContext.Current.GetOwinContext().GetUserManager<ApplicationUserManager>().FindById(i.LecturerId);
+
+                i.Name = user.Name;
+            }
+            return View(upcommingCourse);
         }
 
         public ActionResult About()

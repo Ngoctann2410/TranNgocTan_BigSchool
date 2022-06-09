@@ -72,7 +72,7 @@ namespace TranNgocTan_BigSchool.Models
         public string Email { get; set; }
 
         [Required]
-        
+
         [Display(Name = "Name")]
         public string Name { get; set; }
 
